@@ -1,6 +1,10 @@
 function onPageLoad() {
     console.log("document loaded");
-    var url = "http://127.0.0.1:8000/get_areas_and_locations";
+
+    //var url = "http://127.0.0.1:8000/get_areas_and_locations"; // When running on local machine
+
+    var url = "/get_areas_and_locations" // Good while deployment
+    
     $.get(url, function (data, status) {
 
         console.log("got response for get_areas_and_locations request");
@@ -69,8 +73,8 @@ function onClickedEstimatePrice() {
     var area_type = document.getElementById("uiAreaType");
     var estPrice = document.getElementById("uiEstimatedPrice");
 
-    var url = "http://127.0.0.1:8000/predict_home_price"; //Use this if you are NOT using nginx 
-    // var url = "/api/predict_home_price"; // Use this if  you are using nginx.
+    // var url = "http://127.0.0.1:8000/predict_home_price"; //Use this when running on local machine
+    var url = "/predict_home_price"
 
     $.post(url, {
         sqft: parseFloat(sqft.value),
