@@ -5,6 +5,10 @@ from contextlib import asynccontextmanager
 from pydantic import BaseModel
 import util
 
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from fastapi import Request
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # # This block runs when the server starts or reloads
@@ -28,6 +32,17 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
+
+# Mount the static files (CSS, JS, etc.)
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Initialize Jinja2 templates folder
+templates = Jinja2Templates(directory="templates")
+
+# Serve the homepage (index.html)
+@app.get("/")
+def read_root(request: Request):
+    return templates.TemplateResponse("app.html", {"request": request})
 
 @app.get("/get_location_names")
 async def get_location_names():
@@ -61,12 +76,6 @@ async def predict_home_price(
     estimated_price = util.get_estimated_price(area_type,location, sqft, bhk, bath,balcony)
     return {"estimated_price": estimated_price}
 
-@app.get("/")
-async def root():
-    return {"message": "FastAPI Home Price Prediction API is running successfully!"}
-
 if __name__ == "__main__":
     print("Starting FastAPI Server For Home Price Prediction...")
     uvicorn.run(app, host="127.0.0.1", port=8000)
-    
-    
