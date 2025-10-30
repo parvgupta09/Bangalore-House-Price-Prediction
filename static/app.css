@@ -41,7 +41,7 @@ header.hero {
 header.hero h1 {
   margin: 0;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 30px;
   color: #0d0d0d;
   line-height: 1.05;
   pointer-events: auto;
@@ -56,15 +56,16 @@ header.hero .subtitle {
 }
 
 .form-grid {
-  width: 720px;
+  width: 600px;
   max-width: calc(100% - 40px);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 18px;
+  gap: 20px 18px;
   align-items: start;
   justify-content: center;
   justify-items: center;
   z-index: 2;
+  margin-top: 60px;
   box-sizing: border-box;
 }
 
@@ -83,7 +84,7 @@ header.hero .subtitle {
 }
 
 .form h2 {
-  font-size: 20px;
+  font-size: 15px;
   margin: 0 0 10px 0;
   font-weight: 800;
   color: #111;
@@ -115,7 +116,7 @@ header.hero .subtitle {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 6px;
-  font-size: 20px;
+  font-size: 15px;
   transform: scale(1.1);
 }
 
@@ -132,7 +133,7 @@ header.hero .subtitle {
 .switch-field label {
   background-color: #e4e4e4;
   color: rgba(0, 0, 0, 0.7);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   text-align: center;
   padding: 8px 12px;
@@ -165,8 +166,8 @@ header.hero .subtitle {
   background: linear-gradient(90deg, #9fdc8a, #7cc76a);
   border: 0;
   padding: 0 26px;
-  font-size: 20px;
-  height: 50px;
+  font-size: 17px;
+  height: 40px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
@@ -194,7 +195,7 @@ header.hero .subtitle {
   padding: 10px;
   height: 40px;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -203,7 +204,7 @@ header.hero .subtitle {
   padding: 0px;
   height: 40px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -212,7 +213,7 @@ header.hero .subtitle {
   padding: 0px;
   height: 40px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
