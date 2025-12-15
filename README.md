@@ -15,8 +15,8 @@ It is powered by a **FastAPI backend** and a **responsive frontend** built with 
 
 
 ## Screenshots
-![ ](assets/Screenshot1.png)
-![ ](assets/Scrrenshot2.png)
+<img src="assets/Screenshot1.png" width="800"/>
+<img src="assets/Screenshot2.png" width="800"/>
 
 ## Live Demo  
 You can try out the live version of the app here: 
