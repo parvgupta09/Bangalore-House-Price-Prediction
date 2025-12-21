@@ -106,7 +106,7 @@ Open your browser and go to:
 
 
 
-## Project Structure  
+## Project Structure
 ```
 Bangalore-House-Price-Prediction/
 │
