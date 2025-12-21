@@ -134,12 +134,6 @@ Bangalore-House-Price-Prediction/
 ```
 
 
-
-## License  
-This project is licensed under the **MIT License** — see the [LICENSE](https://github.com/parvgupta09/Bangalore-House-Price-Prediction/blob/main/LICENSE) file for details.
-
-
-
 ## Contact / Connect
 If you liked this project or want to collaborate, feel free to connect with me:
 - [LinkedIn](https://www.linkedin.com/in/parv-gupta-323738309/)
